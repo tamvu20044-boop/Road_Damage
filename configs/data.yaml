@@ -1,1 +1,18 @@
-a
+path: /kaggle/input/datasets/vtmhhh/datakhuyen/RDD2022_L3_New
+train:
+- China_RDD/train
+- India_RDD/train
+- Japan_RDD/train
+val:
+- China_RDD/val
+- India_RDD/val
+- Japan_RDD/val
+test:
+- China_RDD/test
+- India_RDD/test
+- Japan_RDD/test
+nc: 3
+names:
+  0: pothole
+  1: linear_crack
+  2: alligator_crack
