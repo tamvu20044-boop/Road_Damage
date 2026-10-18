@@ -98,7 +98,7 @@ Progression of Box Loss, Class Loss, and mAP metrics across training epochs:
 ### 1. Installation
 ```bash
 git clone https://github.com/tamvu20044-boop/Road_Damage.git
-cd road-damage-detection-yolo26
+cd Road_Damage
 pip install -r requirements.txt
 ```
 ### 2. Model Inference
