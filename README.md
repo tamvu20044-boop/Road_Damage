@@ -92,3 +92,40 @@ Progression of Box Loss, Class Loss, and mAP metrics across training epochs:
 │
 ├── requirements.txt
 └── README.md
+```
+---
+## 🚀 Quickstart & Inference
+### 1. Installation
+```bash
+git clone https://github.com/your-username/road-damage-detection-yolo26.git
+cd road-damage-detection-yolo26
+pip install -r requirements.txt
+```
+### 2. Model Inference
+You can run direct inference on any test image or road inspection video using Python:
+```python
+from ultralytics import YOLO
+# 1. Load the fine-tuned model (choose Small for accuracy or Nano for speed)
+model = YOLO("weights/yolo26s.pt")
+# 2. Perform object detection
+results = model.predict(
+    source="path/to/road_test.jpg",
+    conf=0.35,
+    iou=0.45,
+    save=True
+)
+# 3. Print detected damages
+for box in results[0].boxes:
+    cls_id = int(box.cls[0])
+    conf = float(box.conf[0])
+    print(f"Detected: {model.names[cls_id]} | Confidence: {conf:.2f}")
+```
+### 3. Model Evaluation
+To evaluate on your custom validation set:
+```bash
+yolo task=detect mode=val model=weights/yolo26s.pt data=configs/data.yaml imgsz=640
+```
+---
+## 📜 Acknowledgments & Citation
+- **RDD2022 Dataset**: Crowdsensing-based Road Damage Detection Challenge 2022 (Sekilab).
+- **Ultralytics**: YOLO framework implementation and training infrastructure.
