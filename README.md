@@ -4,7 +4,7 @@
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-EE4C2C?logo=pytorch&logoColor=white)](https://pytorch.org/)
 [![YOLO](https://img.shields.io/badge/Model-YOLO26%20Nano%20%26%20Small-00FFFF)](https://github.com/ultralytics/ultralytics)
 [![Dataset](https://img.shields.io/badge/Dataset-RDD2022%20(3%20Classes)-green)](https://crddc2022.sekilab.global/)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 
 An end-to-end deep learning framework for real-time detection and classification of road distress surfaces. This project comprehensively benchmarks a lightweight edge-optimized model (**YOLO26-Nano**) against a higher-capacity representation model (**YOLO26-Small**) across multi-national road damage scenarios.
 
